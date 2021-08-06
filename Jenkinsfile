@@ -28,12 +28,7 @@ spec:
       image: alcide/skan:v0.9.0-debug
       command:
       - cat
-      tty: true
-    - name: gradle
-      image: gradle:6.0.1-jdk11
-      command:
-      - cat
-      tty: true   
+      tty: true  
     - name: java-node
       image: timbru31/java-node:11-alpine-jre-14
       command:
@@ -129,7 +124,7 @@ spec:
         container('java-node'){
           script {
              // Install application dependency
-            sh ''' cd src/ && npm install --package-lock && cd ../'''
+            // sh ''' cd src/ && gem install bundler && bundle install ge&& cd ../'''
 
             // Start OPASP Dependency Check
             dependencyCheck(
@@ -143,7 +138,7 @@ spec:
             )
 
              // Remove application dependency
-            sh '''rm -rf src/node_modules src/package-lock.json'''
+            // sh '''rm -rf src/''
 
 
                   }// end script

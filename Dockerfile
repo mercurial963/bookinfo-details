@@ -1,6 +1,6 @@
 FROM 2.7-alpine
-WORKDIR /usr/src/apps
-COPY . /usr/src/apps
+WORKDIR /src/
+COPY . /src/
 
 EXPOSE 9080
 CMD ["ruby", "details.rb", "9080"]
