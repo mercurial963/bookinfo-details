@@ -1,4 +1,4 @@
-FROM 2.7-alpine
+FROM ruby:2.7-alpine
 WORKDIR /src/
 COPY . /src/
 
