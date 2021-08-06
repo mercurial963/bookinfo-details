@@ -1,4 +1,5 @@
-FROM ruby:2.7-alpine
+FROM ruby:2.7-slim
+# FROM ruby:2.7-alpine 3.14// Error getaddrinfo: Name does not resolve (SocketError)
 WORKDIR /src/
 COPY . /src/
 
